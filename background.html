@@ -2,10 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Mongo Live</title>
-    <script type="text/javascript" src="/js/jquery-1.4.4.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="/js/smoothie.js" charset="utf-8"></script>
-    <script type="text/javascript" src="/js/app.js" charset="utf-8"></script>
-    <link href="/themes/dark.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/smoothie.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/app.js" charset="utf-8"></script>
+    <script>
+    if(typeof safari === 'object') {
+        safari.application.addEventListener("command", captureCommand, false);
+        function captureCommand(event) {
+            if(event.command !== 'activate-mongolive') {
+                return;
+            }
+            var tab = safari.application.activeBrowserWindow.openTab('foreground');
+            safari.application.activeBrowserWindow.activeTab.url = safari.extension.baseURI+'main.html';
+        }
+    }
+	</script>
+    <link href="themes/dark.css" rel="stylesheet" type="text/css" media="screen" />
 
 <script type="text/javascript" charset="utf-8">
 <!--

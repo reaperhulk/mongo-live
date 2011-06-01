@@ -21,9 +21,9 @@ body { background-color: #402817; text-align: center; font-family: sans-serif; m
 
 fieldset { text-align: right; }
 
-#header { background-color: #402817; background-image: url("/images/back-header.png"); background-position: center top; background-repeat: no-repeat; height: 100px; }
+#header { background-color: #402817; background-image: url("../images/back-header.png"); background-position: center top; background-repeat: no-repeat; height: 100px; }
 
-#logo { background-image: url("/images/logo-mongoDB.png"); height: 90px; width: 217px; }
+#logo { background-image: url("../images/logo-mongoDB.png"); height: 90px; width: 217px; }
 
 #headerContent { width: 650px; margin: 0px auto; padding: 0px; padding-top: 10px; position: relative; }
 
